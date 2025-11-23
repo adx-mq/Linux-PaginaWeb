@@ -85,6 +85,69 @@
 </div>
 <div class="doorway">
   <div class="doorway__opening"></div>
+  <!-- START: Bear SVG (pegalo dentro de .doorway en tu HTML) -->
+<svg class="bear" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" width="320" height="320" aria-hidden="true">
+  <!-- BODY / HEAD -->
+  <g class="bear__body" transform="translate(30,10)">
+    <ellipse class="bear__fur" cx="120" cy="130" rx="110" ry="100" fill="#6b4226"/>
+    <!-- belly -->
+    <ellipse cx="120" cy="155" rx="60" ry="50" fill="#8f5b3a"/>
+  </g>
+
+  <!-- EARS -->
+  <g class="bear__ears" transform="translate(30,10)">
+    <circle cx="50" cy="50" r="26" fill="#6b4226"/>
+    <circle cx="190" cy="50" r="26" fill="#6b4226"/>
+    <circle cx="50" cy="50" r="14" fill="#8f5b3a"/>
+    <circle cx="190" cy="50" r="14" fill="#8f5b3a"/>
+  </g>
+
+  <!-- FACE FEATURES -->
+  <g transform="translate(30,10)">
+    <!-- muzzle -->
+    <ellipse cx="120" cy="105" rx="45" ry="32" fill="#e9c6af"/>
+    <!-- nose -->
+    <ellipse cx="120" cy="100" rx="9" ry="6" fill="#2b1a12"/>
+    <!-- mouth (slightly upset) -->
+    <path d="M105 115 q15 12 30 0" stroke="#2b1a12" stroke-width="3" fill="none" stroke-linecap="round" />
+    <!-- eyes -->
+    <circle cx="100" cy="90" r="6" fill="#2b1a12"/>
+    <circle cx="140" cy="90" r="6" fill="#2b1a12"/>
+  </g>
+
+  <!-- BROWS (JS toggles .bear__brows display) -->
+  <g class="bear__brows" transform="translate(30,10)" >
+    <path d="M90 78 q10 -8 20 0" stroke="#2b1a12" stroke-width="5" stroke-linecap="round" fill="none" />
+    <path d="M130 78 q10 -8 20 0" stroke="#2b1a12" stroke-width="5" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- ARMS / BACK ARM (used by JS as one arm) -->
+  <g class="toggle-scene__arm toggle-scene__arm--main bear__arm bear__arm--back" transform="translate(-20,120) rotate(-20 160 20)">
+    <path d="M160 20 q-40 10 -70 30 q5 30 40 30 q35 0 60 -25 q-10 -20 -30 -35z" fill="#6b4226"/>
+    <!-- back paw pad -->
+    <ellipse class="bear__pad" cx="150" cy="62" rx="22" ry="18" fill="#deaa87"/>
+  </g>
+
+  <!-- FRONT ARM + PAW -->
+  <g class="toggle-scene__arm toggle-scene__arm--front bear__arm bear__arm--front" transform="translate(0,120)">
+    <!-- arm shape -->
+    <path d="M40 20 q50 20 90 10 q20 -4 30 -18 q-6 -12 -25 -18 q-35 -10 -95 26z" fill="#6b4226"/>
+    <!-- paw (this will be animated by JS as .bear__paw) -->
+    <g class="bear__paw" transform="translate(100,10)">
+      <ellipse cx="0" cy="20" rx="24" ry="28" fill="#6b4226"/>
+      <!-- knuckles shape (has id 'knuckles' used in your JS) -->
+      <g id="knuckles" transform="translate(-2,10)">
+        <ellipse cx="-6" cy="-2" rx="6" ry="5" fill="#deaa87"/>
+        <ellipse cx="6" cy="-2" rx="6" ry="5" fill="#deaa87"/>
+        <ellipse cx="14" cy="2" rx="6" ry="5" fill="#deaa87"/>
+      </g>
+      <!-- finger pad center -->
+      <ellipse cx="6" cy="14" rx="10" ry="7" fill="#deaa87"/>
+    </g>
+  </g>
+</svg>
+<!-- END: Bear SVG -->
+
   <svg class="bear" viewBox="0 0 284.946 359.737">
     <g transform="translate(-42.557 -974.222) scale(1.23353)">
       <path class="bear__fur" d="M263.91 1081.415a113.968 96.863 0 00-113.919-95.7 113.968 96.863 0 00-113.9 95.7h227.818z"></path>
